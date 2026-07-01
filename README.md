@@ -54,12 +54,6 @@ cmake --build build
 - **GitHub Actions 対応**: `main` への push などで GHCR に公開
 - **テンプレート向け構成**: `src/Main.cpp` だけを触ればゲームの起点になる
 
-### GitHub Actions
-
-`docker/base/Dockerfile` から base image をビルドし、`.github/workflows/publish-base-image.yml` から GHCR に公開します。
-
-`latest` と commit/tag ベースのタグを付けるので、devcontainer と compose の両方で安定して利用できます。
-
 ### ファイル構成
 
 - `CMakeLists.txt`: ルートの CMake 定義
