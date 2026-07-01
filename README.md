@@ -15,7 +15,13 @@
 
 #### 1. devcontainer で開く
 
-VS Code などで devcontainer を開くと、公開済みの base image をそのまま利用します。
+`/home/noname/me/workspace/personal/siv3d-template` をワークスペースルートにして devcontainer を開くと、公開済みの base image をそのまま利用します。
+
+```bash
+devcontainer up --workspace-folder /home/noname/me/workspace/personal/siv3d-template --remove-existing-container
+```
+
+`workspace-folder` を省略する場合は、必ず `siv3d-template` リポジトリのルートで実行してください。`siv3d-docker` 側には devcontainer 設定を置いていません。
 
 #### 2. compose で起動する
 
