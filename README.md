@@ -8,7 +8,7 @@
 - `ghcr.io/n4mlz/siv3d-docker-base` に公開される Siv3D base image を使える
 - devcontainer で Siv3D の再ビルドなしにすぐ開発を始められる
 - `docker compose` でホストの GUI に接続して Linux 上で実行できる
-- `ccache` と build 用 volume で再ビルドを高速化できる
+- `ccache` と build ディレクトリで再ビルドを高速化できる
 - GitHub Actions から base image を自動公開できる
 
 ### 使い方
@@ -26,7 +26,7 @@ docker compose exec siv3d-app bash
 
 #### 3. プロジェクトをビルドする
 
-コンテナ内またはローカルの Linux 環境で、リポジトリのルートからビルドします。
+コンテナ内またはローカルの Linux 環境で、リポジトリのルートからビルドします。`build/` はホスト側に置かれるので、そのまま `cmake` が書き込めます。
 
 ```bash
 cmake -S . -B build -GNinja -DCMAKE_BUILD_TYPE=Debug
@@ -42,7 +42,7 @@ cmake --build build
 ### 主な feature
 
 - **Siv3D base image の分離**: 重い Siv3D ビルドを `docker/base/Dockerfile` に集約
-- **高速な再ビルド**: `ccache` と named volume でゲーム側の再ビルドを短縮
+- **高速な再ビルド**: `ccache` とホスト側 `build/` でゲーム側の再ビルドを短縮
 - **Linux GUI 対応**: X11 をホストにバイパスして描画可能
 - **devcontainer 対応**: そのまま開いて開発を始められる
 - **GitHub Actions 対応**: `main` への push などで GHCR に公開

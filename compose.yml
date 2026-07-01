@@ -17,10 +17,9 @@ services:
       QT_X11_NO_MITSHM: "1"
     volumes:
       - ./:/workspace
-      - siv3d-build:/workspace/build
+      - ./build:/workspace/build
       - siv3d-ccache:/cache/ccache
       - /tmp/.X11-unix:/tmp/.X11-unix:rw
 
 volumes:
-  siv3d-build:
   siv3d-ccache:
