@@ -1,6 +1,6 @@
 services:
   siv3d-app:
-    image: ghcr.io/n4mlz/siv3d-docker-base:latest
+    image: ghcr.io/xlair-dev/siv3d-docker-base:latest
     container_name: siv3d-app
     init: true
     stdin_open: true

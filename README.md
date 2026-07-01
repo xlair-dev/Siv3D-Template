@@ -5,7 +5,7 @@
 ### できること
 
 - ルート直下の CMake プロジェクトでゲームコードを置ける
-- `ghcr.io/n4mlz/siv3d-docker-base` に公開される Siv3D base image を使える
+- `ghcr.io/xlair-dev/siv3d-docker-base` に公開される Siv3D base image を使える
 - devcontainer で Siv3D の再ビルドなしにすぐ開発を始められる
 - `docker compose` でホストの GUI に接続して Linux 上で実行できる
 - `ccache` と build ディレクトリで再ビルドを高速化できる
